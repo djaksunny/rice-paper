@@ -2,8 +2,8 @@
 
 !.gitignore
 
-!/hypr
-!/kitty
-!/nvim
-!/waybar
-!/yazi
+!hypr
+!kitty
+!nvim
+!waybar
+!yazi

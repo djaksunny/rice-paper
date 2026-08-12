@@ -1,0 +1,9 @@
+*
+
+!.gitignore
+
+!hypr
+!kitty
+!nvim
+!waybar
+!yazi

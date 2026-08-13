@@ -1,0 +1,97 @@
+// -*- mode: jsonc -*-
+{
+    "height": 20,
+    "spacing": 5,
+    "margin-left": 5,
+    "margin-right": 5,
+    "margin-top": 5,
+
+    "modules-left": [
+        "cpu",
+        "memory",
+        "battery",
+        "temperature"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "clock"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}" 
+    },
+
+    "clock": {
+        "format": "{:%Y-%m-%d | %H:%M}",
+        "tooltip-format": "{:%Y-%m-%d | %H:%M:%S}"
+    },
+
+    "cpu": {
+        "format": "󰍛 {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "\uefc5  {used}GiB/{total}GiB"
+    },
+
+    "network": {
+        "format-wifi": "\uf1eb  {essid}",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "format-linked": "{ifname} (No IP) 󰊗",
+        "format-disconnected": "Disconnected ⚠",
+	"on-click": "nmtui"
+    },
+
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "events": {
+            "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
+            "on-charging-100": "notify-send -u normal 'Battery Full!'",
+            "on-discharging": "notify-send -u normal 'Power Switch' Discharging",
+            "on-charging": "notify-send -u normal 'Power Switch' Charging"
+        },
+        "format": "{icon}  {capacity}%",
+        
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+
+     "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+        // "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": " {temperatureC}°C"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    }
+}

@@ -1,0 +1,73 @@
+/* Catppuccin Mocha - Wofi (Translucent) */
+* {
+  font-size: 12px;
+}
+window {
+  background-color: rgba(30, 30, 46, 0.75);
+  border-radius: 10px;
+}
+#scroll {
+  background-color: transparent;
+}
+#outer-box {
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid #cba6f7;
+  border-radius: 10px;
+}
+#main {
+  background-color: transparent;
+}
+scrollbar,
+scrollbar trough,
+undershoot.top,
+undershoot.bottom {
+  min-width: 5px;
+  min-height: 5px;
+  background: none;
+}
+scrollbar slider{
+  background-color: #cba6f7;
+}
+
+#input image {
+  color: #cba6f7; 
+  -gtk-icon-effect: none;
+}
+#input {
+  background-color: rgba(49, 50, 68, 0.6); 
+  color: #cdd6f4;        
+  caret-color: #cba6f7;
+  border: 1px solid #45475a; 
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 10px;
+  outline: 1px solid #585b70;
+}
+#input:focus {
+  border-color: #cba6f7; 
+}
+#input placeholder {
+  color: #1e1e2e; 
+}
+#entry {
+  background-color: transparent;
+  color: #cdd6f4;
+}
+#entry #entry:selected {
+  background-color: rgba(49, 50, 68, 0.8);
+  color: #cba6f7;
+}
+#entry:selected {
+  background-color: rgba(49, 50, 68, 0.8);
+  color: #cba6f7;
+}
+#entry:hover {
+  background-color: rgba(69, 71, 90, 0.8); 
+}
+#text {
+  color: #cdd6f4 ; 
+}
+#text:selected {
+  color: #cba6f7; 
+}

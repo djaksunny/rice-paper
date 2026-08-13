@@ -1,0 +1,5 @@
+terminal = "kitty"
+file_manager = "kitty yazi"
+launcher = "wofi --show drun"
+browser = "brave"
+editor = "kitty nvim"

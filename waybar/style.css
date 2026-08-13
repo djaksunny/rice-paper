@@ -1,0 +1,111 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "JetBrains Mono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0);
+    border-bottom: 3px solid rgba(100, 114, 125, 0);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 1;
+}
+
+#workspaces button {
+    padding: 0;
+    min-width: 25px;
+    min-height: 25px;
+    margin: 4px;
+    background-color: #1e1e2e;
+    opacity: 0.5;
+    color: #ffffff;
+    border: 2px solid #b4befe;
+    border-radius: 100%;
+}
+
+#workspaces button.focused, #workspaces button.active {
+    background-color: #1e1e2e;
+    color: #ffffff;
+    border: 2px solid #cba6f7;
+    opacity: 0.75;
+}
+
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* Unified pill style for the status modules actually in use:
+   cpu, memory, network, temperature, pulseaudio, battery, clock, custom/power.
+   Same height as workspace buttons, rounded rectangle,
+   base color #1e1e2e @ 75% opacity, cba6f7 border */
+#cpu,
+#memory,
+#network,
+#temperature,
+#pulseaudio,
+#battery,
+#clock,
+#custom-power {
+    margin: 4px;
+    padding: 0 10px;
+    min-height: 25px;
+    background-color: rgba(30, 30, 46, 0.75); /* #1e1e2e @ 75% */
+    color: #ffffff;
+    border: 2px solid #cba6f7;
+    border-radius: 25px;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}

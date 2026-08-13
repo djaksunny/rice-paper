@@ -9,8 +9,9 @@
     "modules-left": [
         "cpu",
         "memory",
-        "battery",
-        "temperature"
+	"disk",
+        "temperature",
+        "battery"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -37,6 +38,13 @@
 
     "memory": {
         "format": "\uefc5  {used}GiB/{total}GiB"
+    },
+
+    "disk": {
+	"interval": 30,
+	"paths": ["/"],
+	"format": "💾 {specific_free:0.2f}GiB/{specific_total:0.2f}GiB",
+	"unit": "GB"
     },
 
     "network": {

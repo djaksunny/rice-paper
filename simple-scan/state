@@ -1,0 +1,8 @@
+[window]
+width=786
+height=480
+is-maximized=true
+is-fullscreen=false
+
+[scanner]
+scan-type=adf

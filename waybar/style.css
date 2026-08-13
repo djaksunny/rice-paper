@@ -55,6 +55,7 @@ window#waybar.hidden {
    base color #1e1e2e @ 75% opacity, cba6f7 border */
 #cpu,
 #memory,
+#disk,
 #network,
 #temperature,
 #pulseaudio,

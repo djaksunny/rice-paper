@@ -19,16 +19,22 @@
 	"battery",
         "pulseaudio",
         "network",
-        "clock"
+        "clock#date",
+	"clock#time"
     ],
 
     "hyprland/workspaces": {
         "format": "{icon}" 
     },
 
-    "clock": {
-        "format": "{:%Y-%m-%d | %H:%M}",
-        "tooltip-format": "{:%Y-%m-%d | %H:%M:%S}"
+    "clock#date": {
+    	"format": "📅 {:%Y-%m-%d}",
+    	"tooltip-format": "{:%Y-%m-%d}"
+    },
+
+    "clock#time": {
+    	"format": "⏰ {:%H:%M}",
+	"tooltip-format": "{:%H:%M:%S}"
     },
 
     "cpu": {

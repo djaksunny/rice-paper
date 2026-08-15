@@ -10,13 +10,13 @@
         "cpu",
         "memory",
 	"disk",
-        "temperature",
-        "battery"
+        "temperature"
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
+	"battery",
         "pulseaudio",
         "network",
         "clock"
@@ -37,13 +37,13 @@
     },
 
     "memory": {
-        "format": "\uefc5  {used}GiB/{total}GiB"
+        "format": "\uefc5  {used}GiB / {total}GiB"
     },
 
     "disk": {
 	"interval": 30,
 	"paths": ["/"],
-	"format": "💾 {specific_free:0.2f}GiB/{specific_total:0.2f}GiB",
+	"format": "💾 {used} / {total}",
 	"unit": "GB"
     },
 
@@ -53,7 +53,7 @@
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
         "format-linked": "{ifname} (No IP) 󰊗",
         "format-disconnected": "Disconnected ⚠",
-	"on-click": "nmtui"
+	"on-click": "kitty nmtui"
     },
 
     "battery": {
@@ -100,6 +100,28 @@
             "default": ["", ""]
         },
         "scroll-step": 1,
-        "on-click": "pavucontrol"
+        "on-click": "kitty pulsemixer"
+    },
+
+    "cava": {
+	//"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+	"framerate": 30,
+	"autosens": 1,
+	//"sensitivity": 100,
+	"bars": 14,
+	"lower_cutoff_freq": 50,
+	"higher_cutoff_freq": 10000,
+	"method": "pulse",
+	"source": "auto",
+	"stereo": true,
+	"reverse": false,
+	"monstercat": false,
+	"waves": false,
+	"noise_reduction": 0.77,
+	"input_delay": 2,
+	"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+	"actions": {
+		"on-click-right": "mode"
+	}
     }
 }

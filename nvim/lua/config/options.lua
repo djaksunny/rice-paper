@@ -6,5 +6,6 @@ vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE", ctermbg = "NONE" })
 vim.opt.termguicolors = true
 
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.fillchars = { eob = " " }
 

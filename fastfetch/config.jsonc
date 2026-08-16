@@ -15,7 +15,8 @@
 	"2": "#b4befe"
     },
     "padding": {
-	"right": 2
+	"top": 1,
+	"right": 3
     }
   },
 

@@ -55,10 +55,10 @@
 
     "network": {
         "format-wifi": "\uf1eb  {essid}",
-        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-        "format-linked": "{ifname} (No IP) 󰊗",
-        "format-disconnected": "Disconnected ⚠",
+        "format-ethernet": "󰊗  {ipaddr}/{cidr}",
+        "tooltip-format": "󰊗  {ifname} via {gwaddr}",
+        "format-linked": "󰊗  {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
 	"on-click": "kitty nmtui"
     },
 

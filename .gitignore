@@ -1,5 +1,6 @@
 autostart
 BraveSoftware
+byobu
 Code - OSS
 darktable
 dconf
@@ -8,6 +9,7 @@ fontconfig
 go
 gtk-3.0
 gtk-4.0
+htop
 kicad
 libaccounts-glib
 libreoffice

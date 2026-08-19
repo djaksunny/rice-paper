@@ -68,7 +68,7 @@ window#waybar.hidden {
     background-color: rgba(30, 30, 46, 0.75); /* #1e1e2e @ 75% */
     color: #ffffff;
     border: 2px solid #cba6f7;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 #battery.charging, #battery.plugged {

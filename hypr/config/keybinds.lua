@@ -54,6 +54,14 @@ for i = 1, 10 do
     hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({workspace = i}))
 end
 
+-- Switch to adjacent workspaces
+hl.bind(mod .. " + bracketleft", hl.dsp.focus({workspace = "r-1"}))
+hl.bind(mod .. " + bracketright", hl.dsp.focus({workspace = "r+1"}))
+
+-- Move active to adjacent workspaces
+hl.bind(mod .. " + SHIFT + bracketleft", hl.dsp.window.move({workspace = "r-1"}))
+hl.bind(mod .. " + SHIFT + bracketright", hl.dsp.window.move({workspace = "r+1"}))
+
 -- Multimedia
 -- Laptop keys
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), {locked = true, repeating = true})

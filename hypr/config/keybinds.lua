@@ -1,8 +1,8 @@
 local mod = "SUPER"
 
 -- General
-hl.bind(mod .. " + Q", hl.dsp.exec_cmd(terminal))
-hl.bind(mod .. " + C", hl.dsp.window.close())
+hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd(terminal))
+hl.bind(mod .. " + Q", hl.dsp.window.close())
 hl.bind(mod .. " + E", hl.dsp.exec_cmd(file_manager))
 hl.bind(mod .. " + D", hl.dsp.exec_cmd(launcher))
 hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser))
@@ -58,9 +58,15 @@ end
 hl.bind(mod .. " + bracketleft", hl.dsp.focus({workspace = "r-1"}))
 hl.bind(mod .. " + bracketright", hl.dsp.focus({workspace = "r+1"}))
 
+-- Cycle only through non-empty workspaces
+hl.bind(mod .. " + Tab", hl.dsp.focus({workspace = "e+1"}))
+
 -- Move active to adjacent workspaces
 hl.bind(mod .. " + SHIFT + bracketleft", hl.dsp.window.move({workspace = "r-1"}))
 hl.bind(mod .. " + SHIFT + bracketright", hl.dsp.window.move({workspace = "r+1"}))
+
+-- Move active only to non-empty next workspace
+hl.bind(mod .. " + SHIFT + Tab", hl.dsp.focus({workspace = "e+1"}))
 
 -- Multimedia
 -- Laptop keys

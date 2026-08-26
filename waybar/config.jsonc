@@ -55,9 +55,7 @@
 
     "network": {
         "format-wifi": "\uf1eb  {essid}",
-        "format-ethernet": "󰊗  {ipaddr}/{cidr}",
-        "tooltip-format": "󰊗  {ifname} via {gwaddr}",
-        "format-linked": "󰊗  {ifname} (No IP)",
+        "format-ethernet": "󰊗  {ipaddr}",
         "format-disconnected": "⚠ Disconnected",
 	"on-click": "kitty nmtui"
     },
@@ -67,13 +65,6 @@
         "states": {
             "warning": 30,
             "critical": 15
-        },
-        "events": {
-            "on-discharging-warning": "notify-send -u normal 'Low Battery'",
-            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
-            "on-charging-100": "notify-send -u normal 'Battery Full!'",
-            "on-discharging": "notify-send -u normal 'Power Switch' Discharging",
-            "on-charging": "notify-send -u normal 'Power Switch' Charging"
         },
         "format": "{icon}  {capacity}%",
         

@@ -5,7 +5,7 @@ hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd(terminal))
 hl.bind(mod .. " + Q", hl.dsp.window.close())
 hl.bind(mod .. " + E", hl.dsp.exec_cmd(file_manager))
 hl.bind(mod .. " + D", hl.dsp.exec_cmd(launcher))
-hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mod .. " + F", hl.dsp.exec_cmd(browser))
 hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd(editor))
 
 -- System Power Controls

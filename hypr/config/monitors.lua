@@ -14,6 +14,9 @@ hl.monitor({
     scale = 2
 })
 
+-- Fix XWayland scaling but
+hl.config({ xwayland = { force_zero_scaling = true }})
+
 -- Is the external monitor currently connected?
 local function external_connected()
     for _, m in ipairs(hl.get_monitors()) do

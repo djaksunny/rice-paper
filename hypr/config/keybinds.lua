@@ -84,3 +84,19 @@ hl.bind("ALT + L", hl.dsp.exec_cmd("playerctl next"), { locked = true, repeating
 hl.bind("ALT + K", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
 hl.bind("ALT + J", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { locked = true, repeating = true })
 hl.bind("ALT + V", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true, repeating = true })
+
+-- OLED-friendly mode
+local border_enabled = true
+
+hl.bind(mod .. " + B", function()
+	-- 1. Toggle Waybar
+	hl.dispatch(hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
+
+	-- 2. Toggle borders using hyprctl eval
+	border_enabled = not border_enabled
+	if border_enabled then
+		hl.dispatch(hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ general = { border_size = 2 } })']]))
+	else
+		hl.dispatch(hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ general = { border_size = 0 } })']]))
+	end
+end)

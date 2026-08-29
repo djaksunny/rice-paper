@@ -24,6 +24,7 @@ my rice themed around the catppuccin mocha color palette. includes fastfetch, hy
 | `super + d` | application launcher |
 | `super + f` | browser |
 | `super + return` | text editor |
+| `super + b` | disable static ui |
 
 ### power controls
 | `super + ctrl + s` | shutdown |

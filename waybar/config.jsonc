@@ -6,6 +6,13 @@
     "margin-right": 5,
     "margin-top": 5,
 
+    "layer": "top",
+    "mode": "dock",
+    "modifier-reset": "press",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+
     "modules-left": [
         "cpu",
         "memory",

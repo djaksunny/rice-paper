@@ -1,7 +1,7 @@
 # my catppuccin mocha dotfiles (hyprland)
 
 ## overview
-my rice themed around the catppuccin mocha color palette. includes fastfetch, hypr, kitty, mako, nvim, waybar, wofi, and yazi configs.
+my rice themed around the catppuccin mocha color palette. includes fastfetch, hypr, kitty, mako, nvim, waybar, wofi, and yazi configs. also features oled saver mode (see **keybinds/default programs**) to disable static ui elements.
 
 ## defaults
 | program | default |
@@ -50,10 +50,12 @@ my rice themed around the catppuccin mocha color palette. includes fastfetch, hy
 
 ### screenshot submap
 `super + shift + s` to enter submap:
-* `r` -> capture region to clipboard
-* `w` -> capture window to clipboard
-* `a` -> capture full screen to clipboard
-* `escape` -> cancel / exit
+| keybind | action |
+|---|---|
+| `r` | capture region to clipboard |
+| `w` | capture window to clipboard |
+| `a` | capture full screen to clipboard |
+| `escape` | cancel / exit |
 
 ### media & audio
 | keybind | action |

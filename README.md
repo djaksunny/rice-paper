@@ -27,6 +27,8 @@ my rice themed around the catppuccin mocha color palette. includes fastfetch, hy
 | `super + b` | disable static ui |
 
 ### power controls
+| keybind | action |
+|---|---|
 | `super + ctrl + s` | shutdown |
 | `super + ctrl + r` | reboot |
 | `super + ctrl + z` | suspend (sleep) |

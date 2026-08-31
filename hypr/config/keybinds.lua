@@ -88,7 +88,7 @@ hl.bind("ALT + V", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")
 -- OLED-friendly mode
 local border_enabled = true
 
-hl.bind(mod .. " + B", function()
+hl.bind(mod .. " + G", function()
 	-- 1. Toggle Waybar
 	hl.dispatch(hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
 

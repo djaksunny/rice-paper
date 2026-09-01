@@ -60,13 +60,11 @@ hl.bind(mod .. " + bracketright", hl.dsp.focus({workspace = "r+1"}))
 
 -- Cycle only through non-empty workspaces
 hl.bind(mod .. " + Tab", hl.dsp.focus({workspace = "e+1"}))
+hl.bind(mod .. " + SHIFT + Tab", hl.dsp.window.move({workspace = "e-1"}))
 
 -- Move active to adjacent workspaces
 hl.bind(mod .. " + SHIFT + bracketleft", hl.dsp.window.move({workspace = "r-1"}))
 hl.bind(mod .. " + SHIFT + bracketright", hl.dsp.window.move({workspace = "r+1"}))
-
--- Move active only to non-empty next workspace
-hl.bind(mod .. " + SHIFT + Tab", hl.dsp.window.move({workspace = "r+1"}))
 
 -- Multimedia
 -- Laptop keys
